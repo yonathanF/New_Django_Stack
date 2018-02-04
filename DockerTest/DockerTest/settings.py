@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'graphene_django',
+    'app1.apps.App1Config',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'app1.schema.schema'
+        }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
